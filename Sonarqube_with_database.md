@@ -96,25 +96,25 @@ apt install net-tools
   vi /etc/systemd/system/sonarqube.service
   Paste the below content
   
-  [Unit]
-  Description=SonarQube service
-  After=syslog.target network.target
+  [Unit] 
+Description=SonarQube service
+After=syslog.target network.target
 
-  [Service]
-  Type=forking
-  User=sonar
-  Group=sonar
-  PermissionsStartOnly=true
-  ExecStart=/opt/sonarqube/bin/linux-x86-64/sonar.sh start 
-  ExecStop=/opt/sonarqube/bin/linux-x86-64/sonar.sh stop
-  StandardOutput=syslog
-  LimitNOFILE=65536
-  LimitNPROC=4096
-  TimeoutStartSec=5
-  Restart=always
+[Service]
+Type=forking
+User=sonar
+Group=sonar
+PermissionsStartOnly=true
+ExecStart=/opt/sonarqube/bin/linux-x86-64/sonar.sh start
+ExecStop=/opt/sonarqube/bin/linux-x86-64/sonar.sh stop
+StandardOutput=syslog
+LimitNOFILE=65536
+LimitNPROC=4096
+TimeoutStartSec=5
+Restart=always
 
-  [Install]
-  WantedBy=multi-user.target
+[Install]
+WantedBy=multi-user.target
   ```
 
 1. Add sonar user and grant ownership to /opt/sonarqube directory 
