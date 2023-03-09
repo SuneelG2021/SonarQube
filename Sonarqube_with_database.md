@@ -96,7 +96,7 @@ apt install net-tools
   vi /etc/systemd/system/sonarqube.service
   Paste the below content
   
-  [Unit] 
+[Unit]
 Description=SonarQube service
 After=syslog.target network.target
 
@@ -115,7 +115,8 @@ Restart=always
 
 [Install]
 WantedBy=multi-user.target
-  ```
+
+```
 
 1. Add sonar user and grant ownership to /opt/sonarqube directory 
   ```sh 
