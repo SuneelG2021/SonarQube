@@ -95,7 +95,6 @@ apt install net-tools
 1. Create a file in the path `/etc/systemd/system/sonarqube.service`. File starting as a sonarqube service at the boot time 
   vi /etc/systemd/system/sonarqube.service
   Paste the below content
-  
 [Unit]
 Description=SonarQube service
 After=syslog.target network.target
